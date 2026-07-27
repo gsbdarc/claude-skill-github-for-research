@@ -21,6 +21,12 @@ ln -s "$(pwd)/claude-skill-github-for-research/.claude/skills/github-for-researc
 
 (Use `cp -R` instead of `ln -s` if you'd rather have a static copy. The `mkdir -p` line is still needed either way, since `~/.claude/skills/` may not exist on a fresh Claude Code install.)
 
+### Using this in Cursor
+
+This works in [Cursor](https://cursor.com) too, with no changes. Since **Cursor 2.4** (Jan 2026) Cursor natively supports [Agent Skills](https://cursor.com/docs/skills) using the same `SKILL.md` format, and it deliberately loads skills from `.claude/skills/` and `~/.claude/skills/` for compatibility — so the clone-and-link steps above apply unchanged, and Cursor discovers the skill automatically.
+
+If you'd rather use Cursor's own folders, link (or copy) the same skill folder into `.cursor/skills/` for one project, or `~/.cursor/skills/` to use it everywhere. Cursor surfaces the skill on its own based on the description, or you can call it directly with `/github-for-research` in Agent chat.
+
 ---
 
 ## Design philosophy
